@@ -20,7 +20,7 @@ node{
     env.currentStage = '部署程式'
     sh('kubectl apply -f k8s')
 
-    sleep 30
+    sleep 300
 
     stage '移除舊映像檔'
     env.currentStage = '移除舊映像檔'
