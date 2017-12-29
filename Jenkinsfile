@@ -7,6 +7,7 @@ node{
   checkout scm
 
   try{
+    sleep 300
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
     sh("docker build -t ${imgWithTag} .")
@@ -20,7 +21,7 @@ node{
     env.currentStage = '部署程式'
     sh('kubectl apply -f k8s')
 
-    sleep 300
+    
 
     stage '移除舊映像檔'
     env.currentStage = '移除舊映像檔'
