@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ci-web
+  labels:
+    app: ci-web
+spec:
+  containers:
+  - name: frontend
+    image: nginx
+    ports:
+    - containerPort: 80
