@@ -10,7 +10,7 @@ node{
     sleep 5
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
-    sh("docker build -t ${imgWithTag} .")
+    // sh("docker build -t ${imgWithTag} .")
 
     stage '執行測試'
 
