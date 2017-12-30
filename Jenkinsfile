@@ -7,7 +7,7 @@ node{
   checkout scm
 
   try{
-    sleep 300
+    sleep 5
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
     // sh("docker build -t ${imgWithTag} .")
