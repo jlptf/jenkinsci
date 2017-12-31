@@ -10,7 +10,7 @@ node{
     sleep 5
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
-    // sh("docker build -t ${imgWithTag} .")
+    sh("docker build -t ${imgWithTag} .")
 
     stage '執行測試'
 
@@ -19,7 +19,7 @@ node{
 
     stage '部署程式'
     env.currentStage = '部署程式'
-    sh('kubectl apply -f k8s')
+    // sh('kubectl apply -f k8s')
 
     
 
