@@ -7,7 +7,7 @@ node{
   checkout scm
 
   try{
-    sh('kubectl get po -n jenkins')
+    
     sleep 300
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
@@ -21,7 +21,7 @@ node{
 
     stage '部署程式'
     env.currentStage = '部署程式'
-    
+    jenkins-5786d65b94-srp44
 
     
 
