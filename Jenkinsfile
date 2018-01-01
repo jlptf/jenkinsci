@@ -7,8 +7,7 @@ node{
   checkout scm
 
   try{
-    
-    sleep 300
+    sleep 3
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
     sh("whoami");
@@ -21,7 +20,7 @@ node{
 
     stage '部署程式'
     env.currentStage = '部署程式'
-    jenkins-5786d65b94-srp44
+    sh('kubectl get po -n jenkins')
 
     
 
