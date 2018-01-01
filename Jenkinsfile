@@ -7,7 +7,7 @@ node{
   checkout scm
 
   try{
-    sleep 300
+    sleep 3
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
     sh("whoami");
