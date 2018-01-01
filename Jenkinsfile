@@ -20,7 +20,7 @@ node{
 
     stage '部署程式'
     env.currentStage = '部署程式'
-    // sh('kubectl apply -f k8s')
+    sh('kubectl get po -n jenkins')
 
     
 
