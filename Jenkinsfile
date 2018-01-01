@@ -7,9 +7,10 @@ node{
   checkout scm
 
   try{
-    sleep 3
+    sleep 300
     stage '建立映像檔'
     env.currentStage = '建立映像檔'
+    sh("whoami");
     sh("docker build -t ${imgWithTag} .")
 
     stage '執行測試'
